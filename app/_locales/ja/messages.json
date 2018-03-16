@@ -1,0 +1,20 @@
+{
+  "appName": {
+    "message": "Mirrativ棒読みちゃんWebSocket連携",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "Mirrativ棒読WS",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "Mirrativのコメントを棒読みちゃんWebSocketプラグインに渡して読み上げます。",
+    "description": "The description of the application"
+  },
+  "optionIsNotSaved" : {
+    "message": "設定は保存されていません。"
+  },
+  "optionIsSaved" : {
+    "message": "設定が保存されました。"
+  }
+}
