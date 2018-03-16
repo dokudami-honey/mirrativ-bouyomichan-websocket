@@ -1,0 +1,2 @@
+# mirrativ-bouyomichan-websocket
+Mirrativのコメントを棒読みちゃんWebSocketプラグインに渡して読み上げる
