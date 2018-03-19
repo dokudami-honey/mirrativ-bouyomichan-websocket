@@ -1,0 +1,14 @@
+#container {
+  min-width: 320px;
+}
+
+#enabled,
+#disabled {
+  display: none;
+}
+.buttons {
+    margin-top: 8px;
+}
+.buttons > button {
+    margin-right: 4px;
+}

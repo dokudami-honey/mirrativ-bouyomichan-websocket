@@ -1,0 +1,96 @@
+{
+  "appName": {
+    "message": "Mirrativ棒読みちゃんWebSocket連携",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "Mirrativ棒読WS",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "Mirrativのコメントを棒読みちゃんWebSocketプラグインに渡して読み上げます。",
+    "description": "The description of the application"
+  },
+  "browserActionTitle": {
+    "message": "Mirrativ棒読みちゃんWebSocket連携",
+    "description": "The title of the browser action button"
+  },
+  "optionIsNotSaved": {
+    "message": "設定は保存されていません。"
+  },
+  "optionIsSaved": {
+    "message": "設定が保存されました。"
+  },
+  "loading": {
+    "message": "設定を読み込んでいます……"
+  },
+  "popupSettingMessage": {
+    "message": "このページのMirrativ棒読みちゃんWebSocket連携は現在"
+  },
+  "enabled": {
+    "message": "<strong>有効</strong>です。"
+  },
+  "disabled": {
+    "message": "<strong>無効</strong>です。"
+  },
+  "enableButton": {
+    "message": "有効にする"
+  },
+  "disableButton": {
+    "message": "無効にする"
+  },
+  "optionPageButton": {
+    "message": "詳細設定"
+  },
+  "optionItemHost": {
+    "message": "棒読みちゃんWebSocket ホスト"
+  },
+  "optionItemPort": {
+    "message": "棒読みちゃんWebSocket ポート番号"
+  },
+  "optionItemSpeed": {
+    "message": "読み上げ速度"
+  },
+  "optionItemPitch": {
+    "message": "読み上げピッチ"
+  },
+  "optionItemVolume": {
+    "message": "読み上げボリューム"
+  },
+  "optionItemVoiceType": {
+    "message": "声質"
+  },
+  "optionItemHonorific": {
+    "message": "名前読み上げ時の敬称"
+  },
+  "saveButton": {
+    "message": "保存"
+  },
+  "voiceType0": {
+    "message": "本体設定"
+  },
+  "voiceType1": {
+    "message": "女性1"
+  },
+  "voiceType2": {
+    "message": "女性2"
+  },
+  "voiceType3": {
+    "message": "男性1"
+  },
+  "voiceType4": {
+    "message": "男性2"
+  },
+  "voiceType5": {
+    "message": "中性"
+  },
+  "voiceType6": {
+    "message": "ロボット"
+  },
+  "voiceType7": {
+    "message": "機械1"
+  },
+  "voiceType8": {
+    "message": "機械2"
+  }
+}

@@ -1,0 +1,69 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title data-resource="appName">Mirrativ棒読みちゃん連携オプション</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles/options.css">
+</head>
+
+<body>
+  <div>
+    <span data-resource="optionItemHost"></span>
+    <br>
+    <input id="option_host" class="option-item" type="text" placeholder="localhost">
+  </div>
+  <div>
+    <span data-resource="optionItemPort"></span>
+    <br>
+    <input id="option_port" class="option-item" type="text" placeholder="50002">
+  </div>
+  <div>
+    <span data-resource="optionItemSpeed"></span>
+    <br>
+    <input id="option_speed" class="option-item" placeholder="50～200。-1を指定すると本体設定">
+  </div>
+  <div>
+    <span data-resource="optionItemPitch"></span>
+    <br>
+    <input id="option_pitch" class="option-item" placeholder="50～200。-1を指定すると本体設定">
+  </div>
+  <div>
+    <span data-resource="optionItemVolume"></span>
+    <br>
+    <input id="option_volume" class="option-item" placeholder="0～100。-1を指定すると本体設定">
+  </div>
+  <div>
+    <span data-resource="optionItemVoiceType"></span>
+    <br>
+    <select id="option_type" class="option-item">
+      <option data-resource="voiceType0" value="0"></option>
+      <option data-resource="voiceType1" value="1"></option>
+      <option data-resource="voiceType2" value="2"></option>
+      <option data-resource="voiceType3" value="3"></option>
+      <option data-resource="voiceType4" value="4"></option>
+      <option data-resource="voiceType5" value="5"></option>
+      <option data-resource="voiceType6" value="6"></option>
+      <option data-resource="voiceType7" value="7"></option>
+      <option data-resource="voiceType8" value="8"></option>
+    </select>
+  </div>
+  <div>
+    <input id="option_read_name" class="option-item" type="checkbox">
+    <span class="label-read-name"></span>
+  </div>
+  <div>
+    <span data-resource="optionItemHonorific"></span>
+    <br>
+    <input id="option_honorific" class="option-item" type="text" placeholder="さん">
+  </div>
+  <div id="message"></div>
+  <div>
+    <button id="save" data-resource="saveButton"></button>
+  </div>
+  <script src="../scripts/options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title data-resource="appName">-</title>
+  <link rel="stylesheet" type="text/css" href="../styles/popup.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="loading" data-resource="loading">
+    </div>
+    <div id="enabled">
+      <span data-resource="popupSettingMessage">
+      </span>
+      <br>
+      <span data-resource="enabled">
+      </span>
+      <br>
+      <div class="buttons">
+        <button id="disable-button" data-resource="disableButton"></button>
+        <button class="option-page" data-resource="optionPageButton"></button>
+      </div>
+    </div>
+    <div id="disabled">
+      <span data-resource="popupSettingMessage">
+      </span>
+      <br>
+      <span data-resource="disabled">
+      </span>
+      <br>
+      <div class="buttons">
+        <button id="enable-button" data-resource="enableButton"></button>
+        <button class="option-page" data-resource="optionPageButton"></button>
+      </div>
+    </div>
+  </div>
+  <script src="../scripts/popup.js"></script>
+</body>
+
+</html>
