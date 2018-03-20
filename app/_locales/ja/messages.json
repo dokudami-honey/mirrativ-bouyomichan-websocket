@@ -60,6 +60,9 @@
   "optionItemVoiceType": {
     "message": "声質"
   },
+  "optionReadName": {
+    "message": "コメント時にユーザ名も読み上げる"
+  },
   "optionItemHonorific": {
     "message": "名前読み上げ時の敬称"
   },
