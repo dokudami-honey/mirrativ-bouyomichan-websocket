@@ -1,5 +1,5 @@
 import { u } from './libs/umbrella.min.js';
-import { defaultOptions, DEFAULT_PORT } from './modules/constants';
+import { defaultOptions, DEFAULT_PORT, DEFAULT_HOST } from './modules/constants';
 import logger from './modules/log';
 
 const log = process.env.NODE_ENV === 'development' ? logger.debug : () => { };
@@ -13,21 +13,22 @@ const inIncomming = (comment) => {
   const handlingEvent = 'DOMSubtreeModified';
   const commentBlockSelector = '.mrChatList__list span';
   const commentItemSelector = '.mrChatList__item';
+  const readFlagData = 'bouyomi-read';
   $wrapper.on(handlingEvent, commentBlockSelector, function (e) {
     // オプションが読めない可能性を考慮してデフォルト値を指定しておく
     chrome.storage.local.get(defaultOptions, function (config) {
       log('config:', config);
       if (!config.enabled) {
-        u(commentItemSelector).addClass(readFlagClass);
+        u(commentItemSelector).data(readFlagData, 'true');
         return false;
       }
       // 棒読みちゃんに渡す文章格納用
       let contents = [];
       // コメントのリストから読み上げ済みを除いたものが対象
-      u(commentItemSelector).not('.' + readFlagClass).each(function (elem) {
+      u(commentItemSelector).not('[data-' + readFlagData + ']').each(function (elem) {
         const $elem = u(elem);
         // 読み上げ済みフラグ追加
-        $elem.addClass(readFlagClass);
+        $elem.data(readFlagData, 'true');
         // 棒読みちゃんに渡す名前と発言内容を取得
         const $children = $elem.children();
         const $user_text = u($children.nodes[1]).children();
@@ -54,14 +55,15 @@ const inIncomming = (comment) => {
         const delim = '<bouyomi>';
         const comments = contents.join(' ');
         const message = [config.speed, config.pitch, config.volume, config.type, comments].join(delim);
-        const port = config.port | DEFAULT_PORT;
+        const host = config.host || DEFAULT_HOST;
+        const port = config.port || DEFAULT_PORT;
         log('socket message:', message);
-        const socket = new WebSocket('ws://' + config.host + ':' + port + '/');
+        const socket = new WebSocket('ws://' + host + ':' + port + '/');
         socket.onopen = function () {
           socket.send(message);
         };
         socket.onerror = function (err) {
-          console.log(err);
+          logger.error(err);
         };
       }
     });

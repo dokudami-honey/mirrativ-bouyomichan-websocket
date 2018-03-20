@@ -4,10 +4,11 @@ const targets = [mirrativBroadcastUrl];
 if (process.env.NODE_ENV === 'development') {
   targets.push(/http:\/\/192\.168\.33\.30\/.*/);
 }
+export const DEFAULT_HOST = 'localhost';
 export const DEFAULT_PORT = 50002;
 export const defaultOptions = {
   enabled: false,
-  host: 'localhost',
+  host: DEFAULT_HOST,
   port: DEFAULT_PORT,
   read_name: false,
   honorific: 'さん',
