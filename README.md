@@ -1,7 +1,56 @@
-# mirrativ bouyomichan websocket
+# Mirrativ-棒読みちゃんWebSocket連携
+## はじめに
+このChrome Extensionは、Mirrativ配信中のコメントを[棒読みちゃん]で読み上げる目的で開発されました。
+このExtensionと[棒読みちゃん]の連携はWebSocket([BouyomiChan-WebSocket-Plugin])を用いて行います。
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+## 前提
+- [BouyomiChan-WebSocket-Plugin]が導入済みであること
+- [Google Chrome]が導入済みであること
 
+## 導入
+Chrome Web Store経由でこの[Extention]をインストールする。
+
+## 配信
+1. Mirrativで配信を開始する
+1. 棒読みちゃんを起動する(BouyomiChan-WebSocket-Pluginが有効であることを確認する)
+1. アドレスバーの右にあるこのExtensionのアイコンをクリックする
+1. 「有効にする」ボタンを押下する
+
+これでコメントが投稿されるたびに棒読みちゃんが読み上げてくれるはずです。
+
+## 設定
+設定を変更するにはChrome拡張機能のオプションを開きます。オプションは下記のいずれかの方法で開くことができます。
+- [Chrome拡張機能](chrome://extensions/?options=noblmbggdipkcgmaoeanjmafigmfjigf)
+- アドレスバーの右にあるこのExtensionのアイコンをクリックして「詳細設定」ボタンを押下
+- アドレスバーの右にあるこのExtensionのアイコンを右クリックして「オプション」を選択
+### 設定項目
+#### 棒読みちゃんWebSocketホスト
+配信するPCと棒読みちゃんが読み上げるPCが異なる場合は、ここに棒読みちゃんのホスト名またはIPアドレスを設定します。同じ場合は変更する必要はありません。
+#### 棒読みちゃんWebSocket ポート番号
+BouyomiChan-WebSocket-Pluginを自分でビルドし、その際ポート番号を変更した場合にこの項目を設定します。何を言っているのか分からなければ変更する必要はありません。
+#### 読み上げ速度
+#### 読み上げピッチ
+#### 読み上げボリューム
+#### 声質
+読み上げに関する設定です。実装しておいてアレですが、棒読みちゃん本体で設定したほうが使い勝手が良いです。
+#### コメント時にユーザ名も読み上げる
+チェックを入れておくとコメントの冒頭にコメントしたユーザ名も読み上げます。入室時はこの設定にかかわらずユーザ名を読み上げます。
+#### 名前読み上げ時の敬称
+「ちゃん」でも「様」でもお好きなものを。スマホアプリ版と似た感じにしたい場合は「」(空文字列)にすると良いでしょう。
+
+設定を変更したら「保存」ボタンを押下して保存します。
+
+## 関連
+- [棒読みちゃん]
+- [BouyomiChan-WebSocket-Plugin]
+- [m!ka.さん](https://twitter.com/kimera2_twt/status/796249680036302848) (ExtensionとWebSocketを連携するというアイデアは私のオリジナルではありません)
+
+[棒読みちゃん]:(http://chi.usamimi.info/Program/Application/BouyomiChan/)
+[BouyomiChan-WebSocket-Plugin]:(https://github.com/chocoa/BouyomiChan-WebSocket-Plugin)
+[Google Chrome]:(https://www.google.co.jp/chrome/index.html)
+[Extention]:(https://chrome.google.com/webstore/....)
+
+# For developer
 ## Installation
 
 	$ npm install
