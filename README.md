@@ -1,15 +1,14 @@
 # Mirrativ-棒読みちゃんWebSocket連携
 ## はじめに
-このChrome Extensionは、Mirrativ配信中のコメントを[棒読みちゃん](http://chi.usamimi.info/Program/Application/BouyomiChan/)で読み上げる目的で開発されました。
-このExtensionと棒読みちゃんの連携はWebSocket([BouyomiChan-WebSocket-Plugin](https://github.com/chocoa/BouyomiChan-WebSocket-Plugin))を用いて行います。
+このChrome Extensionは、Mirrativ配信中のコメントを[棒読みちゃん]で読み上げる目的で開発されました。
+このExtensionと[棒読みちゃん]の連携はWebSocket([BouyomiChan-WebSocket-Plugin])を用いて行います。
 
 ## 前提
-- [棒読みちゃん](http://chi.usamimi.info/Program/Application/BouyomiChan/)が導入済みであること
-- [BouyomiChan-WebSocket-Plugin](https://github.com/chocoa/BouyomiChan-WebSocket-Plugin)が導入済みであること
-- Google Chromeが導入済みであること
+- [BouyomiChan-WebSocket-Plugin]が導入済みであること
+- [Google Chrome]が導入済みであること
 
 ## 導入
-Chrome Web Store経由でこのExtentionをインストールする。
+Chrome Web Store経由でこの[Extention]をインストールする。
 
 ## 配信
 1. Mirrativで配信を開始する
@@ -42,9 +41,14 @@ BouyomiChan-WebSocket-Pluginを自分でビルドし、その際ポート番号�
 設定を変更したら「保存」ボタンを押下して保存します。
 
 ## 関連
-- [棒読みちゃん](http://chi.usamimi.info/Program/Application/BouyomiChan/)
-- [BouyomiChan-WebSocket-Plugin](https://github.com/chocoa/BouyomiChan-WebSocket-Plugin)
+- [棒読みちゃん]
+- [BouyomiChan-WebSocket-Plugin]
 - [m!ka.さん](https://twitter.com/kimera2_twt/status/796249680036302848) (ExtensionとWebSocketを連携するというアイデアは私のオリジナルではありません)
+
+[棒読みちゃん]:(http://chi.usamimi.info/Program/Application/BouyomiChan/)
+[BouyomiChan-WebSocket-Plugin]:(https://github.com/chocoa/BouyomiChan-WebSocket-Plugin)
+[Google Chrome]:(https://www.google.co.jp/chrome/index.html)
+[Extention]:(https://chrome.google.com/webstore/....)
 
 # For developer
 ## Installation
