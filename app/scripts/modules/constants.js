@@ -1,13 +1,4 @@
 /*
- * URL patterns.
- */
-const mirrativBroadcastUrl = /https:\/\/www\.mirrativ\.com\/broadcast\/.*/;
-const targets = [mirrativBroadcastUrl];
-// development時のみローカル環境のURLを追加する。
-if (process.env.NODE_ENV === 'development') {
-  targets.push(/http:\/\/192\.168\.33\.30\/.*/);
-}
-/*
  * default option.
  */
 export const DEFAULT_HOST = 'localhost';
@@ -23,7 +14,6 @@ export const defaultOptions = {
   volume: -1,
   type: 0
 };
-export const targetUrlPattern = targets;
 /*
  * for chrome.declarativeContent.PageStateMatcher用
  */
@@ -39,9 +29,8 @@ if (process.env.NODE_ENV === 'development') {
 }
 export const pageMatcherOptions = options;
 export default {
-  // 対象のURL
-  // targetUrlPattern: targetUrlPattern,
   // 設定値のデフォルト
   defaultOptions: defaultOptions,
+  // 対象のURLのためのPageStateMatcherのオプション
   pageMatcherOptions: pageMatcherOptions
 };
